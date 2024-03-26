@@ -1,0 +1,25 @@
+.button {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--item-background);
+  color: white;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button:focus-visible {
+  background-color: var(--item-hover-background);
+}
+
+@media (min-width: 768px) {
+  .button {
+    width: 200px;
+    height: 56px;
+    border: none;
+    background-color: var(--item-background);
+    border-radius: 8px;
+  }
+}

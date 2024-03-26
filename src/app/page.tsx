@@ -29,7 +29,7 @@ export default function Home() {
       <div className="introduction-container">
         <div className="image">
           <Image
-            alt="Wai Zaw Tun's image"
+            alt="Wai Zaw Tun&spos;s image"
             src={profileImage}
             style={{
               maxWidth: "100%",
@@ -43,7 +43,7 @@ export default function Home() {
           />
         </div>
         <div className="paragraph">
-          <p className="title">I'm Wai Zaw Tun</p>
+          <p className="title">I&apos;m Wai Zaw Tun</p>
           <p className="description">
             A <span className="item">full stack developer</span>,{" "}
             <span className="item">designer</span>,{" "}
@@ -79,7 +79,7 @@ export default function Home() {
               <div className="description-container">
                 <p className="card-title">Frontend Developer</p>
                 <p className="card-description">
-                  I'm a frontend developer with experience in building
+                  I&apos;m a frontend developer with experience in building
                   responsive and optimized sites.
                 </p>
               </div>
@@ -89,7 +89,7 @@ export default function Home() {
               <div className="description-container">
                 <p className="card-title">Backend Developer</p>
                 <p className="card-description">
-                  I've experienced developing fast and optimized back-end
+                  I&apos;ve experienced developing fast and optimized back-end
                   systems and APIs.
                 </p>
               </div>
@@ -99,8 +99,8 @@ export default function Home() {
               <div className="description-container">
                 <p className="card-title">UI Designer</p>
                 <p className="card-description">
-                  I've designed multiple landing pages and have created design
-                  systems as well.
+                  I&apos;ve designed multiple landing pages and have created
+                  design systems as well.
                 </p>
               </div>
             </div>

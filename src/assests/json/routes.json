@@ -1,0 +1,20 @@
+{
+  "name": "routes",
+  "value": [
+    { "id": 1, "name": "home", "link": "/", "icon": "" },
+    {
+      "id": 2,
+      "name": "projects",
+      "link": "/project",
+      "icon": "TaskAlt"
+    },
+    { "id": 3, "name": "blog", "link": "/blog", "icon": "Article" },
+    {
+      "id": 4,
+      "name": "resume",
+      "link": "/resume",
+      "icon": "Description"
+    },
+    { "id": 5, "name": "contact", "link": "/contact", "icon": "Phone" }
+  ]
+}

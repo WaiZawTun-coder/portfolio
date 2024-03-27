@@ -1,0 +1,17 @@
+.not-found {
+  height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nav-links.error_404 {
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .not-found {
+    height: calc(100vh - 70px);
+  }
+}

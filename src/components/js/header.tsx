@@ -3,10 +3,10 @@
 // next components
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from "react";
 
 // css
 import "../css/header.css";
-import React from "react";
 
 // icons
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
@@ -14,9 +14,18 @@ import ArticleIcon from "@mui/icons-material/Article";
 import DescriptionIcon from "@mui/icons-material/Description";
 import PhoneIcon from "@mui/icons-material/Phone";
 
+// json
+import routes from "@/assests/json/routes.json";
+
+// custom components
+import IconResolver from "@/components/js/icon_resolver";
+
 export default function Header() {
   const [menuActive, setMenuActive] = React.useState(false);
   const pathname = usePathname();
+  const curr_pathname = "/" + pathname.split("/")[1];
+
+  console.log(curr_pathname);
 
   const menu_toggler = () => {
     setMenuActive((prev) => !prev);
@@ -30,7 +39,11 @@ export default function Header() {
 
   return (
     <nav className="nav-container">
-      <Link href="/" className="brand-name" onClick={brand_name_click_handler}>
+      <Link
+        href={routes.value[0].link}
+        className="brand-name"
+        onClick={brand_name_click_handler}
+      >
         Portfolio
       </Link>
       <div
@@ -43,38 +56,26 @@ export default function Header() {
       </div>
       <div className={`nav-links-container ${menuActive ? "active" : ""}`}>
         {/* to do need to add icons on mobile */}
-        <Link
-          href="/project"
-          className={`nav-links ${pathname === "/project" ? "active" : ""}`}
-          onClick={menu_toggler}
-        >
-          <TaskAltIcon className="nav-links-icon" />
-          Projects
-        </Link>
-        <Link
-          href="/"
-          className={`nav-links ${pathname === "/blog" ? "active" : ""}`}
-          onClick={menu_toggler}
-        >
-          <ArticleIcon className="nav-links-icon" />
-          Blog
-        </Link>
-        <Link
-          href="/"
-          className={`nav-links ${pathname === "/resume" ? "active" : ""}`}
-          onClick={menu_toggler}
-        >
-          <DescriptionIcon className="nav-links-icon" />
-          Resume
-        </Link>
-        <Link
-          href="/"
-          className={`nav-links ${pathname === "/contact" ? "active" : ""}`}
-          onClick={menu_toggler}
-        >
-          <PhoneIcon className="nav-links-icon" />
-          Contact
-        </Link>
+        {routes.value.map((route) => {
+          if (route.name !== "home") {
+            return (
+              <Link
+                href={route.link}
+                className={`nav-links${
+                  curr_pathname === route.link ? " active" : ""
+                }`}
+                onClick={menu_toggler}
+                key={route.id}
+              >
+                <IconResolver
+                  iconName={route.icon}
+                  className={`nav-links-icon`}
+                />
+                {route.name}
+              </Link>
+            );
+          }
+        })}
       </div>
     </nav>
   );

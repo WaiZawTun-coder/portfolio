@@ -54,7 +54,7 @@ main {
   background: var(--primary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   main {
     margin-top: 70px;
     min-height: calc(100vh - 70px);

@@ -1,5 +1,3 @@
-export default function Home() {
-    return (
-        <div>Project</div>
-    )
+export default function Project() {
+  return <div>Project</div>;
 }

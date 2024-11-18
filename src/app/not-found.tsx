@@ -2,13 +2,13 @@
 
 // Next components
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 // css
 import "@/app/404.css";
 
 // jsons
 import routes from "@/assests/json/routes.json";
-import Link from "next/link";
 
 export default function Custom404() {
   const pathname = usePathname();
@@ -19,7 +19,7 @@ export default function Custom404() {
       <h3>Here are the avaliable pages.</h3>
       <div className="links-list">
         {routes.value.map((route) => (
-          <code>
+          <code key={route.id}>
             <Link
               href={route.link}
               className="nav-links error_404"

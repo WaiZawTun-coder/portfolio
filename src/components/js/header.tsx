@@ -25,8 +25,6 @@ export default function Header() {
   const pathname = usePathname();
   const curr_pathname = "/" + pathname.split("/")[1];
 
-  console.log(curr_pathname);
-
   const menu_toggler = () => {
     setMenuActive((prev) => !prev);
   };

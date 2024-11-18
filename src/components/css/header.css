@@ -117,7 +117,7 @@
   fill: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .menu-toggler {
     display: none;
   }
@@ -132,7 +132,7 @@
     background: transparent;
     flex-direction: row;
     gap: 10px;
-    padding: 0;
+    padding: 0px;
   }
 
   .nav-links {
@@ -158,6 +158,6 @@
 
 @media (min-width: 1200px) {
   .nav-container {
-    padding: 7px 12.5vw;
+    padding: 7px 15vw;
   }
 }

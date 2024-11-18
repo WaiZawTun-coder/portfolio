@@ -1,0 +1,151 @@
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+}
+
+.blog-post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 400px;
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  /* border: 1px solid red; */
+  padding: 10px;
+  margin: 10px 0;
+  background-color: var(--container-background);
+  border-radius: 16px;
+}
+
+.blog-post-container p {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-post-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: auto 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.author-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.author {
+  padding: 10px;
+}
+
+.author .name {
+  font-weight: bold;
+  min-width: fit-content;
+}
+
+.author .upload-time {
+  font-weight: bold;
+  font-size: 13px;
+  min-width: fit-content;
+}
+
+.tags {
+  display: flex;
+  position: fixed;
+  width: 80vw;
+  height: 0px;
+  bottom: 0;
+  left: 10vw;
+  background-color: var(--container-background);
+  border: 0px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  overflow: hidden;
+  transition: all ease-in-out 300ms;
+}
+
+.tags.active {
+  border: 1px solid var(--background);
+  height: 150px;
+}
+
+.tags::after {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
+.tags.active::after {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+  /* background: red; */
+}
+
+.blog-post-tag {
+  width: 100%;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 5px;
+  background-color: lightblue;
+  border-radius: 17px;
+  color: var(--container-background);
+  text-align: center;
+}
+
+.blog-post-body {
+  width: 100%;
+  padding: 0px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-post-body img {
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.blog-post-body-text {
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .tags {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 0;
+    border-radius: 0;
+    left: auto;
+  }
+
+  .tags + svg {
+    display: none;
+  }
+}

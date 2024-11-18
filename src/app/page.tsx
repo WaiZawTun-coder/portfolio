@@ -19,13 +19,52 @@ import BrushIcon from "@mui/icons-material/Brush";
 import DnsIcon from "@mui/icons-material/Dns";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 
+// json
+import Projects from "@/assests/json/projects.json";
+import IconResolver from "@/components/js/icon_resolver";
+
 export default function Home() {
   const size = useWindowSize();
   const image_width = (size.width * 33.333) / 100;
   const image_height = (image_width * 4) / 3;
 
+  const [projects, setProjects] = React.useState({
+    projects: [Projects.projects[0], Projects.projects[1]],
+  });
+
+  function toggle_project_description(index: Number, toOpen: Boolean) {
+    if (size.width < 768) {
+      const container = document.getElementById(`project-card-${index}`);
+      const description = document.getElementById(`project-${index}`);
+      if (container && description) {
+        if (toOpen) {
+          container.style.zIndex = "9";
+          description.style.display = "flex";
+        } else {
+          container.style.zIndex = "";
+          description.style.display = "none";
+        }
+      }
+    }
+  }
+
+  function getMoreProject() {
+    console.log("Get More Projects");
+    if (projects.projects.length < Projects.projects.length)
+      setProjects((projects) => {
+        return {
+          projects: [
+            ...projects.projects,
+            Projects.projects[projects.projects.length],
+            Projects.projects[projects.projects.length + 1],
+          ],
+        };
+      });
+  }
+
   return (
-    <div className="main-container">
+    <div className="container">
+      {/* Introduction */}
       <div className="introduction-container">
         <div className="image">
           <Image
@@ -56,6 +95,7 @@ export default function Home() {
           <Xbutton title="Contact Me" onClick={() => {}} />
         </div>
       </div>
+      {/* About */}
       <div className="about-container">
         <p className="title">About</p>
         <div className="about-description">
@@ -74,6 +114,7 @@ export default function Home() {
             />
           </div>
           <div className="cards-container">
+            {/* about (skills) */}
             <div className="about-card">
               <BrushIcon fontSize="large" className="about-icon" />
               <div className="description-container">
@@ -106,6 +147,82 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      {/* Projects */}
+      <div className="project-container">
+        <p className="title">Projects</p>
+        {/* project cards */}
+        <div className="project-card-container">
+          {projects.projects.map((project, index) => {
+            return (
+              <div
+                className="home-project-card"
+                key={project.name}
+                id={`project-card-${index}`}
+              >
+                <div
+                  className="card-image"
+                  onClick={() => {
+                    toggle_project_description(index, true);
+                  }}
+                >
+                  <Image
+                    src={profileImage}
+                    alt="Project name"
+                    style={{
+                      maxWidth: "250px",
+                      minWidth: "250px",
+                      width: "250px",
+                      height: "300px",
+                      borderRadius: "8px",
+                      overflow: "hidden",
+                    }}
+                    priority
+                  />
+                  <p className="mobile-project-name">{project.name}</p>
+                </div>
+                <div
+                  className="project-description-container"
+                  id={`project-${index}`}
+                >
+                  <div
+                    className="close-btn"
+                    onClick={() => {
+                      toggle_project_description(index, false);
+                    }}
+                  >
+                    <IconResolver
+                      iconName="Close"
+                      key={`project-${index}-close`}
+                    />
+                  </div>
+                  <div className="description-detail">
+                    <p className="project_name">{project.name}</p>
+                    <div className="mini-description">
+                      {project.description}
+                    </div>
+                  </div>
+                  <div className="action-btn">
+                    <Xbutton
+                      onClick={() => {}}
+                      title="Learn More"
+                      key={project.name}
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        {Projects.projects.length > projects.projects.length ? (
+          <Xbutton
+            onClick={getMoreProject}
+            title="Load More..."
+            key="load-more"
+          />
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

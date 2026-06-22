@@ -14,7 +14,13 @@ const Collab = () => {
         </h2>
         <p className="text-lg text-gray-400">Feel free to reach out to me</p>
 
-        <Button variant="outlined" color="primary" sx={{ maxWidth: 250 }}>
+        <Button
+          variant="outlined"
+          color="primary"
+          sx={{ maxWidth: 250 }}
+          href="mailto:waizawtun.coder@gmail.com"
+          target="_blank"
+        >
           Send me a message
         </Button>
       </div>

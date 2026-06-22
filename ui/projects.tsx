@@ -2,7 +2,7 @@ import ProjectsSection from "./project-swiper";
 
 const Projects = () => {
   return (
-    <div
+    <section
       id="projects"
       className="w-full max-w-7xl mx-auto flex flex-col gap-8 px-4 md:px-8 py-8 md:py-16"
     >
@@ -27,7 +27,7 @@ const Projects = () => {
       >
         View All Projects
       </Button> */}
-    </div>
+    </section>
   );
 };
 

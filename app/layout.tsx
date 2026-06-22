@@ -20,8 +20,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wai Zaw Tun - Portfolio",
-  description: "This web is created by Wai Zaw Tun and using as a portfolio",
+  title: "Wai Zaw Tun | Full Stack Developer",
+  description:
+    "Full Stack Developer specializing in Next.js, TypeScript, Spring Boot, and Laravel.",
+  openGraph: {
+    title: "Wai Zaw Tun",
+    description:
+      "Full Stack Developer specializing in modern web applications.",
+    images: ["/profile.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -34,12 +41,28 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Wai Zaw Tun",
+            jobTitle: "Full Stack Developer",
+            url: "https://waizawtun.vercel.app",
+            sameAs: [
+              "https://github.com/WaiZawTun-coder",
+              "https://linkedin.com/in/wai-zaw-tun-457295362",
+            ],
+          }),
+        }}
+      />
       <body className="min-h-full flex flex-col">
         <Navbar />
-        <Providers>
-          {children}
-          <Footer />
-        </Providers>
+        <main>
+          <Providers>{children}</Providers>
+        </main>
+        <Footer />
       </body>
     </html>
   );

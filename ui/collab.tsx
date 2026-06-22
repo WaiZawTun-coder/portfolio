@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Collab = () => {
   return (
-    <div
+    <section
       id="contact"
       className="w-full max-w-5xl mx-auto px-4 md:px-8 py-8 md:py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-8"
     >
@@ -34,7 +34,7 @@ const Collab = () => {
           className="w-90 h-64 object-cover"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

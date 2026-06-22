@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div
+    <section
       className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-10 px-4 md:px-8 py-16"
       id="home"
     >
@@ -16,6 +16,7 @@ const Hero = () => {
           alt="Profile Picture"
           className="rounded-full w-64 h-64 object-cover"
           loading="eager"
+          priority
         />
       </div>
       {/* introduction */}
@@ -117,7 +118,7 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

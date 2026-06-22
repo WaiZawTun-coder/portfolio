@@ -98,7 +98,7 @@ const Navbar = () => {
   }, [activeLink]);
 
   return (
-    <div
+    <header
       className={clsx(
         "h-16 w-full bg-primary z-50 fixed top-0 left-0 transition-transform duration-300",
         isNavbarVisible ? "translate-y-0" : "-translate-y-full",
@@ -170,7 +170,7 @@ const Navbar = () => {
           ></span>
         </button>
       </div>
-    </div>
+    </header>
   );
 };
 

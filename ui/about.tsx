@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div
+    <section
       id="about"
       className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 md:px-8 py-8 md:py-16"
     >
@@ -27,7 +27,7 @@ const About = () => {
           scalable, and user-friendly web applications.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -85,7 +85,7 @@ const technologicals: {
 
 const Skills = () => {
   return (
-    <div
+    <section
       id="skills"
       className="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16"
     >
@@ -151,7 +151,7 @@ const Skills = () => {
           )),
         )}
       </Swiper>
-    </div>
+    </section>
   );
 };
 

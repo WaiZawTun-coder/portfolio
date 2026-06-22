@@ -17,7 +17,7 @@ interface projectType {
 const projectList: projectType[] = [
   {
     id: 1,
-    title: "Yukai - Social Media 1",
+    title: "Yukai - Social Media",
     description:
       "A social media platform built with Next.js and PHP allowing users to connect and share content.",
     image: "/project-covers/yukai-logo.png",

@@ -41,22 +41,24 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Wai Zaw Tun",
-            jobTitle: "Full Stack Developer",
-            url: "https://waizawtun.vercel.app",
-            sameAs: [
-              "https://github.com/WaiZawTun-coder",
-              "https://linkedin.com/in/wai-zaw-tun-457295362",
-            ],
-          }),
-        }}
-      />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Wai Zaw Tun",
+              jobTitle: "Full Stack Developer",
+              url: "https://waizawtun.vercel.app",
+              sameAs: [
+                "https://github.com/WaiZawTun-coder",
+                "https://linkedin.com/in/wai-zaw-tun-457295362",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <Navbar />
         <main>

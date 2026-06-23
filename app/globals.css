@@ -5,6 +5,8 @@
   --foreground: #171717;
   --color-primary: #ff6b00;
   --color-primary-hover: #e85d04;
+  --color-secondary: #334155;
+  --color-secondary-hover: #424c5a;
   --color-accent: #ffa62b;
 
   --color-background: #0d0d0d;
@@ -21,6 +23,8 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--color-primary);
   --color-primary-hover: var(--color-primary-hover);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-hover: var(--color-secondary-hover);
   --color-accent: var(--color-accent);
   --color-background: var(--color-background);
   --color-surface: var(--color-surface);

@@ -11,8 +11,8 @@ const Home = () => {
     <div className="w-full">
       <Hero />
       <About />
-      <Projects />
       <Skills />
+      <Projects />
       <Collab />
     </div>
   );

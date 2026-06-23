@@ -98,7 +98,7 @@ const Hero = () => {
       </div>
       {/* image */}
       <div className="relative flex items-baseline justify-center order-1 lg:order-2 max-w-116">
-        <div className="absolute -bottom-4 -left-10 w-36 h-36 bg-[radial-gradient(circle,#ff6b00_2px,transparent_2px)] bg-size-[16px_16px] -z-10" />
+        <div className="absolute top-4 -left-10 w-36 h-36 bg-[radial-gradient(circle,#ff6b00_2px,transparent_2px)] bg-size-[16px_16px] -z-10" />
         <Image
           width={256}
           height={256}

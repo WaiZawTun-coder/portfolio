@@ -211,7 +211,7 @@ const Navbar = () => {
             p: 0,
             display: {
               xs: "flex",
-              md: "none",
+              lg: "none",
             },
             flexDirection: "column",
             alignItems: "center",

@@ -201,46 +201,48 @@ const Navbar = () => {
         </nav>
 
         {/* mobile menu button */}
-        <Button
-          aria-label="Toggle Menu"
-          onClick={handleMobileMenuToggle}
-          sx={{
-            width: 40,
-            height: 40,
-            minWidth: 40,
-            p: 0,
-            display: {
-              xs: "flex",
-              lg: "none",
-            },
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: 0.8,
-            borderRadius: 2,
-            bgcolor: "transparent",
-            zIndex: 50,
-          }}
-        >
-          <span
-            className={clsx(
-              "block w-6 h-0.5 bg-white transition-transform duration-300",
-              isMobileMenuOpen && "rotate-45 translate-y-2",
-            )}
-          ></span>
-          <span
-            className={clsx(
-              "block w-6 h-0.5 bg-white transition-opacity duration-300",
-              isMobileMenuOpen && "opacity-0",
-            )}
-          ></span>
-          <span
-            className={clsx(
-              "block w-6 h-0.5 bg-white transition-transform duration-300",
-              isMobileMenuOpen && "-rotate-45 -translate-y-2",
-            )}
-          ></span>
-        </Button>
+        <div className="block lg:hidden">
+          <Button
+            aria-label="Toggle Menu"
+            onClick={handleMobileMenuToggle}
+            sx={{
+              width: 40,
+              height: 40,
+              minWidth: 40,
+              p: 0,
+              display: {
+                xs: "flex",
+                lg: "none",
+              },
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 0.8,
+              borderRadius: 2,
+              bgcolor: "transparent",
+              zIndex: 50,
+            }}
+          >
+            <span
+              className={clsx(
+                "block w-6 h-0.5 bg-white transition-transform duration-300",
+                isMobileMenuOpen && "rotate-45 translate-y-2",
+              )}
+            ></span>
+            <span
+              className={clsx(
+                "block w-6 h-0.5 bg-white transition-opacity duration-300",
+                isMobileMenuOpen && "opacity-0",
+              )}
+            ></span>
+            <span
+              className={clsx(
+                "block w-6 h-0.5 bg-white transition-transform duration-300",
+                isMobileMenuOpen && "-rotate-45 -translate-y-2",
+              )}
+            ></span>
+          </Button>
+        </div>
       </div>
     </header>
   );

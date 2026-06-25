@@ -39,7 +39,8 @@ const Projects = () => {
         spaceBetween={20}
         breakpoints={{
           0: { slidesPerView: 1, centeredSlides: true },
-          768: { slidesPerView: 2, centeredSlides: true },
+          400: { slidesPerView: 1.2, centeredSlides: true },
+          768: { slidesPerView: 2, centeredSlides: false },
           1024: { slidesPerView: 3, centeredSlides: false },
         }}
         freeMode={false}
@@ -68,7 +69,7 @@ const Projects = () => {
 
           return (
             <SwiperSlide key={project.id} className="h-auto">
-              <div className="w-full min-w-0 h-160 rounded-2xl overflow-hidden bg-secondary flex flex-col">
+              <div className="w-full min-w-0 h-160 max-w-100 rounded-2xl overflow-hidden bg-secondary flex flex-col mx-auto">
                 <div className="relative w-full h-75 overflow-hidden">
                   <Image
                     src={project.image}

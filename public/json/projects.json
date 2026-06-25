@@ -15,7 +15,7 @@
       "id": 2,
       "name": "Project Management System",
       "type": "Desktop Application",
-      "image": "/project-covers/yukai-logo.png",
+      "image": "/project-covers/pms-logo.png",
       "description": "A desktop-based Project Management System built with JavaFX and MySQL that enables teams to manage projects, assign tasks, and track progress efficiently. The application features secure authentication, role-based access control, project and task management, and team collaboration tools, following a structured multi-layer architecture for maintainability and scalability.",
       "longDescription": "Project Management System is an enterprise-style desktop application developed using JavaFX and MySQL to streamline project planning, task management, and team collaboration. The system provides secure user authentication and role-based access control, allowing administrators, project managers, and team members to access features according to their responsibilities.Users can create and manage projects, assign tasks to team members, monitor task progress, set priorities and deadlines, and organize project resources through an intuitive graphical interface. The application follows a layered architecture that separates the user interface, business logic, and data access layers, improving maintainability and scalability. By combining robust database design with a responsive JavaFX frontend, the system demonstrates practical experience in desktop application development, database management, authentication and authorization, and enterprise software architecture.",
       "stack": [

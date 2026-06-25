@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full max-w-5xl mx-auto py-4 text-sm text-gray-500 grid grid-cols-2 md:grid-cols-3 gap-4 px-8">
+    <footer className="w-full max-w-7xl mx-auto py-4 text-sm text-gray-500 grid grid-cols-2 md:grid-cols-3 gap-4 px-8">
       <p className="text-xl font-bold text-white order-1 h-fit">Wai Zaw Tun</p>
       <div className="flex md:flex-col items-center justify-start flex-wrap max-h-27  gap-4 order-3 md:order-2 col-span-2 md:col-span-1">
         <Link href="#home">Home</Link>

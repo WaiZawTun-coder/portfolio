@@ -8,7 +8,7 @@ import EmailIcon from "@mui/icons-material/Email";
 const Hero = () => {
   return (
     <section
-      className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center place-items-center mt-10 px-4 lg:px-8 py-16"
+      className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center place-items-center mt-10 px-4 lg:px-8 py-16"
       id="home"
     >
       <div className="flex flex-col items-start justify-center gap-4">

@@ -1,0 +1,33 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Yukai - Social Media",
+      "type": "Full Stack",
+      "image": "/project-covers/yukai-logo.png",
+      "description": "Yukai - Social is a full-stack social networking platform built with Next.js, PHP, and MySQL. It allows users to connect through posts, real-time chat, friend systems, and media sharing, featuring authentication, social interactions, and communication tools like audio/video calling.",
+      "longDescription": "Yukai - Social is a full-stack social media application developed using Next.js for the frontend and PHP with MySQL for the backend. The platform is designed to provide a complete social networking experience, including user authentication, post creation, likes, comments, and interactive user engagement features.The system supports real-time chat functionality, friend management (add/remove friends), and social connections through follow/unfollow systems. In addition, it includes advanced communication features such as audio and video calling, making it a more complete social interaction platform.The backend is built using PHP with MySQL to handle data management, authentication, and API services, while the frontend uses Next.js to deliver a responsive and modern user interface. The project demonstrates full-stack development skills, real-time communication integration, and scalable social application architecture.",
+      "stack": ["Next.js", "PHP", "MySQL"],
+      "demoLink": "https://yukai-social.vercel.app",
+      "githubLink": "https://github.com/WaiZawTun-coder/yukai_frontend"
+    },
+    {
+      "id": 2,
+      "name": "Project Management System",
+      "type": "Desktop Application",
+      "image": "/project-covers/yukai-logo.png",
+      "description": "A desktop-based Project Management System built with JavaFX and MySQL that enables teams to manage projects, assign tasks, and track progress efficiently. The application features secure authentication, role-based access control, project and task management, and team collaboration tools, following a structured multi-layer architecture for maintainability and scalability.",
+      "longDescription": "Project Management System is an enterprise-style desktop application developed using JavaFX and MySQL to streamline project planning, task management, and team collaboration. The system provides secure user authentication and role-based access control, allowing administrators, project managers, and team members to access features according to their responsibilities.Users can create and manage projects, assign tasks to team members, monitor task progress, set priorities and deadlines, and organize project resources through an intuitive graphical interface. The application follows a layered architecture that separates the user interface, business logic, and data access layers, improving maintainability and scalability. By combining robust database design with a responsive JavaFX frontend, the system demonstrates practical experience in desktop application development, database management, authentication and authorization, and enterprise software architecture.",
+      "stack": [
+        "Java",
+        "JavaFX",
+        "MySQL",
+        "JDBC",
+        "Scene Builder",
+        "RBAC",
+        "MVC Architecture"
+      ],
+      "githubLink": "https://github.com/WaiZawTun-coder/Project_Management_System"
+    }
+  ]
+}

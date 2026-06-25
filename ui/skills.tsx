@@ -1,6 +1,12 @@
-import Image from "next/image";
-import { Autoplay, FreeMode } from "swiper/modules";
+import { SvgIconProps } from "@mui/material";
+import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+// icons
+import HandymanIcon from "@mui/icons-material/Handyman";
+import PersonalVideoIcon from "@mui/icons-material/PersonalVideo";
+import SensorWindowIcon from "@mui/icons-material/SensorWindow";
+import StorageIcon from "@mui/icons-material/Storage";
 
 interface technologicalType {
   id: number;
@@ -12,6 +18,7 @@ const technologicals: {
   id: number;
   name: string;
   techList: technologicalType[];
+  icon: React.ComponentType<SvgIconProps>;
 }[] = [
   {
     id: 1,
@@ -43,6 +50,7 @@ const technologicals: {
         image: "/skill-logos/bootstrap.png",
       },
     ],
+    icon: PersonalVideoIcon,
   },
   {
     id: 2,
@@ -64,6 +72,7 @@ const technologicals: {
         image: "/skill-logos/node-js.png",
       },
     ],
+    icon: SensorWindowIcon,
   },
   {
     id: 3,
@@ -80,6 +89,17 @@ const technologicals: {
         image: "/skill-logos/mysql.png",
       },
     ],
+    icon: StorageIcon,
+  },
+  {
+    id: 4,
+    name: "Tools & Others",
+    techList: [
+      { id: 1, name: "Git & GitHub", image: "/skill-logos/git.png" },
+      { id: 2, name: "Postman", image: "/skill-logos/postman.png" },
+      { id: 3, name: "Figma", image: "/skill-logos/figma.png" },
+    ],
+    icon: HandymanIcon,
   },
 ];
 
@@ -89,67 +109,56 @@ const Skills = () => {
       id="skills"
       className="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16"
     >
-      <div className="flex flex-col gap-4 mb-8">
-        <p className="text-lg font-bold text-white text-center">Skills</p>
-        <h2 className="text-4xl font-bold text-white text-center">
-          Technologies I use
-        </h2>
-      </div>
-      {technologicals.map((technological) => (
-        <div key={technological.id} className="mb-8">
-          <h2 className="text-xl font-bold text-white mb-8 md:text-center">
-            {technological.name}
-          </h2>
-          <div className="h-18 flex items-center justify-center gap-4 flex-wrap">
-            {technological.techList.map((tech) => (
-              <div
-                key={tech.id}
-                className="h-18 flex flex-col items-center justify-end gap-2 min-w-14"
-              >
-                <Image
-                  src={tech.image}
-                  alt={tech.name}
-                  width={36}
-                  height={36}
-                  className="min-w-9 min-h-9 object-contain"
-                />
-                {tech.name}
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-
-      {/* Swiper */}
+      {/* <SkillsSwiper /> */}
       <Swiper
-        modules={[Autoplay, FreeMode]}
+        modules={[Pagination, Autoplay, FreeMode]}
+        pagination={{ clickable: true }}
+        grabCursor
+        spaceBetween={20}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 4 },
+        }}
         freeMode={true}
         loop={true}
         speed={3000}
         autoplay={{
-          delay: 1,
+          delay: 4000,
           disableOnInteraction: false,
         }}
-        slidesPerView="auto"
-        spaceBetween={20}
+        slidesPerView={1}
         allowTouchMove={false}
       >
-        {technologicals.map((tech) =>
-          tech.techList.map((techName) => (
-            <SwiperSlide key={techName.id} style={{ width: "auto" }}>
-              <div className="flex gap-4 items-center p-2 rounded-full">
-                <Image
-                  src={techName.image}
-                  alt={techName.name}
-                  width={36}
-                  height={36}
-                  className="min-w-9 min-h-9 object-contain"
-                />
-                {techName.name}
+        {technologicals.map((technology) => {
+          const Icon = technology.icon;
+
+          return (
+            <SwiperSlide key={technology.id} className="h-full min-h-50">
+              <div className="border border-primary rounded-2xl p-5 flex items-start gap-4 min-w-0 min-h-40">
+                {/* Icon */}
+                <div className="shrink-0">
+                  <Icon color="primary" sx={{ fontSize: 36 }} />
+                </div>
+
+                {/* Content */}
+                <div className="ml-4 flex-1 flex flex-col justify-start min-w-0">
+                  <h2 className="text-white font-semibold text-lg">
+                    {technology.name}
+                  </h2>
+
+                  <ul className="text-sm text-gray-300 mt-2 space-y-1 wrap-break-word">
+                    {technology.techList.map((tech) => (
+                      <li key={tech.id} className="list-disc">
+                        {tech.name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </SwiperSlide>
-          )),
-        )}
+          );
+        })}
       </Swiper>
     </section>
   );

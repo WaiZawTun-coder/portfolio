@@ -72,8 +72,6 @@ const Navbar = () => {
       document.querySelectorAll("section[id]"),
     ) as HTMLElement[];
 
-    console.log({ sections });
-
     if (sections.length === 0) return;
 
     const observer = new IntersectionObserver(
@@ -84,8 +82,6 @@ const Navbar = () => {
           .map((entry) => entry.target as HTMLElement);
 
         if (visibleSections.length === 0) return;
-
-        console.log({ visibleSections });
 
         // pick FIRST visible section in DOM order
         const firstVisible = sections.find((section) =>

@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "Frontend",
+    "techList": [
+      {
+        "id": 1,
+        "name": "Next.js",
+        "image": "/skill-logos/next-js.svg"
+      },
+      {
+        "id": 2,
+        "name": "React",
+        "image": "/skill-logos/react-js.svg"
+      },
+      {
+        "id": 3,
+        "name": "Typescript",
+        "image": "/skill-logos/typescript.png"
+      },
+      {
+        "id": 4,
+        "name": "Tailwind",
+        "image": "/skill-logos/tailwind.png"
+      },
+      {
+        "id": 5,
+        "name": "Bootstrap",
+        "image": "/skill-logos/bootstrap.png"
+      }
+    ],
+    "icon": "PersonalVideoIcon"
+  },
+  {
+    "id": 2,
+    "name": "Backend",
+    "techList": [
+      {
+        "id": 1,
+        "name": "Spring Boot",
+        "image": "/skill-logos/spring-boot.svg"
+      },
+      {
+        "id": 2,
+        "name": "Laravel",
+        "image": "/skill-logos/laravel.png"
+      },
+      {
+        "id": 3,
+        "name": "Node.js",
+        "image": "/skill-logos/node-js.png"
+      }
+    ],
+    "icon": "SensorWindowIcon"
+  },
+  {
+    "id": 3,
+    "name": "Database",
+    "techList": [
+      {
+        "id": 1,
+        "name": "PostgreSQL",
+        "image": "/skill-logos/postgreSQL.png"
+      },
+      {
+        "id": 2,
+        "name": "MySQL",
+        "image": "/skill-logos/mysql.png"
+      }
+    ],
+    "icon": "StorageIcon"
+  },
+  {
+    "id": 4,
+    "name": "Tools & Others",
+    "techList": [
+      { "id": 1, "name": "Git & GitHub", "image": "/skill-logos/git.png" },
+      { "id": 2, "name": "Postman", "image": "/skill-logos/postman.png" },
+      { "id": 3, "name": "Figma", "image": "/skill-logos/figma.png" }
+    ],
+    "icon": "HandymanIcon"
+  }
+]

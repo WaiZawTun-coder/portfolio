@@ -37,7 +37,7 @@ const About = () => {
 
       {/* content */}
       <div className="flex flex-col gap-4 items-start col-span-2 p-6 border-b lg:border-b-0 lg:border-r border-primary">
-        <h2 className="text-4xl font-bold text-white">About Me</h2>
+        <h2 className="text-3xl lg:text-4xl font-bold text-white">About Me</h2>
         <p className="text-sm text-gray-400">
           I&apos;m Wai Zaw Tun, a full-stack developer based in Bago, Myanmar. I
           enjoy building scalablem reliable and user-friendly web applications

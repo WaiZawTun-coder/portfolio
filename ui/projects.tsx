@@ -13,7 +13,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 // json
-import importProjects from "@/public/json/projects.json";
+import importProjects from "@/app/json/projects.json";
 
 const Projects = () => {
   const projects = importProjects.projects;
@@ -24,8 +24,8 @@ const Projects = () => {
       id="projects"
       className="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16"
     >
-      <div className="flex items-center justify-between">
-        <h2 className="text-4xl font-bold text-white mb-4">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
           Featured Projects
         </h2>
         <span className="flex items-center justify-center text-primary">
@@ -68,8 +68,11 @@ const Projects = () => {
           }, [project?.name]);
 
           return (
-            <SwiperSlide key={project.id} className="h-auto">
-              <div className="w-full min-w-0 h-160 max-w-100 rounded-2xl overflow-hidden bg-secondary flex flex-col mx-auto">
+            <SwiperSlide
+              key={project.id}
+              className="h-auto lg:pt-4 lg:first:pl-4 lg:last:pr-4"
+            >
+              <div className="w-full min-w-0 h-160 max-w-100 rounded-2xl overflow-hidden bg-secondary flex flex-col mx-auto cursor-pointer hover:scale-[1.02] transition-scale duration-300">
                 <div className="relative w-full h-75 overflow-hidden">
                   <Image
                     src={project.image}
@@ -99,9 +102,7 @@ const Projects = () => {
 
                   {/* project description */}
                   <p className="text-sm mt-4 text-gray-200">
-                    {project.description.length > 300
-                      ? `${project.description.slice(0, 300)}...`
-                      : project.description}
+                    {project.description}
                   </p>
 
                   {/* Project Stack */}

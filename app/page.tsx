@@ -6,6 +6,8 @@ import Hero from "@/ui/hero";
 import Projects from "@/ui/projects";
 import Skills from "@/ui/skills";
 import Achievements from "@/ui/achievements";
+import Timeline from "@/ui/timeline";
+import TechStack from "@/ui/tech-stack";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <About />
       <Skills />
       <Projects />
+      <Timeline />
+      <TechStack />
       <Collab />
     </div>
   );

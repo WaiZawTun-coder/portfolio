@@ -9,10 +9,13 @@ const Collab = () => {
     >
       <div className="flex flex-col gap-4 items-center md:items-start">
         <p className="text-lg font-bold text-gray-200">Contact</p>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-3xl lg:text-4xl font-bold text-white">
           Let&apos;s work together
         </h2>
-        <p className="text-lg text-gray-400">Feel free to reach out to me</p>
+        <p className="text-lg text-gray-400">
+          Have a project in mind or want to discuss opportunities? I&apos;d love
+          to hear from you.
+        </p>
 
         <Button
           variant="outlined"

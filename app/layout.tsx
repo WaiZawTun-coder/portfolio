@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: "Wai Zaw Tun | Full Stack Developer",
   description:
     "Full Stack Developer specializing in Next.js, TypeScript, Spring Boot, and Laravel.",
+  icons: {
+    icon: "/icon.ico",
+  },
   openGraph: {
     title: "Wai Zaw Tun",
     description:
